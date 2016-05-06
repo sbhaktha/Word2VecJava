@@ -81,7 +81,8 @@ releaseNextVersion := { ver =>
 }
 
 javacOptions in doc := Seq(
-  "-source", "1.7")
+  "-source", "1.7",
+  "-Xdoclint:none")
 
 //  "-group", "Core", "nl.inl.blacklab.search:nl.inl.blacklab.search.*:nl.inl.blacklab.tools:nl.inl.blacklab.index:nl.inl.blacklab.index.*:nl.inl.blacklab.highlight:nl.inl.blacklab.queryParser.*:nl.inl.blacklab.perdocument",
 //  "-group", "Tests", "nl.inl.blacklab.example:nl.inl.blacklab.indexers.*",
