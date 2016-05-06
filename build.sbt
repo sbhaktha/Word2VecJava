@@ -84,12 +84,6 @@ javacOptions in doc := Seq(
   "-source", "1.7",
   "-Xdoclint:none")
 
-//  "-group", "Core", "nl.inl.blacklab.search:nl.inl.blacklab.search.*:nl.inl.blacklab.tools:nl.inl.blacklab.index:nl.inl.blacklab.index.*:nl.inl.blacklab.highlight:nl.inl.blacklab.queryParser.*:nl.inl.blacklab.perdocument",
-//  "-group", "Tests", "nl.inl.blacklab.example:nl.inl.blacklab.indexers.*",
-//  "-group", "Supporting classes", "nl.inl.blacklab.filter:nl.inl.blacklab.forwardindex:nl.inl.blacklab.externalstorage:nl.inl.blacklab.suggest:nl.inl.util",
-//  "-Xdoclint:none")
-
-
 lazy val word2vecjavaRoot = Project(
   id = "word2vecjavaRoot",
   base = file("."),
