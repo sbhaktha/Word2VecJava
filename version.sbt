@@ -1,1 +1,1 @@
-version in ThisBuild := "1.0-ALLENAI-3"
+version in ThisBuild := "1.0-ALLENAI-4-SNAPSHOT"
