@@ -7,10 +7,11 @@ import sbtrelease.ReleaseStateTransformations._
 name := "Word2VecJava"
 
 libraryDependencies ++= Seq(
+  "org.scalacheck" %% "scalacheck" % "1.12.0" % Test,
+  "com.novocode" % "junit-interface" % "0.11" % Test,
   "org.apache.commons" % "commons-lang3" % "3.1",
   "com.google.guava" % "guava" % "18.0",
   "commons-io" % "commons-io" % "2.4",
-  "junit" % "junit" % "4.11",
   "log4j" % "log4j" % "1.2.17",
   "joda-time" % "joda-time" % "2.3",
   "org.apache.thrift" % "libfb303" % "0.9.1",
