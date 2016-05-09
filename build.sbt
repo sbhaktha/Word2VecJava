@@ -34,7 +34,7 @@ lazy val releaseProcessSetting = releaseProcess := Seq(
 
 
 lazy val buildSettings = Seq(
-  organization := "com.medallia.word2vec",
+  organization := "org.allenai.word2vec",
   crossScalaVersions := Seq(defaultScalaVersion),
   scalaVersion <<= crossScalaVersions { (vs: Seq[String]) => vs.head },
   publishMavenStyle := true,
@@ -55,31 +55,6 @@ lazy val buildSettings = Seq(
         <email>dev-role@allenai.org</email>
       </developer>
     </developers>)
-
-releaseVersion := { ver =>
-  val snapshot = "(.*-ALLENAI-\\d+)-SNAPSHOT".r
-  ver match {
-    case snapshot(v) => v
-    case _ => versionFormatError
-  }
-}
-
-releaseNextVersion := { ver =>
-  val release = "(.*-ALLENAI)-(\\d+)".r
-  // pattern matching on Int
-  object Int {
-    def unapply(s: String): Option[Int] = try {
-      Some(s.toInt)
-    } catch {
-      case _: java.lang.NumberFormatException => None
-    }
-  }
-
-  ver match {
-    case release(prefix, Int(number)) => s"$prefix-${number+1}-SNAPSHOT"
-    case _ => versionFormatError
-  }
-}
 
 javacOptions in doc := Seq(
   "-source", "1.7",
